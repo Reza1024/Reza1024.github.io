@@ -2,8 +2,8 @@
 <head>
 	<meta charset="utf-8" />
 	<title>GraphSvg</title>
-	<script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="GraphSvg.js"></script>
+	<script src="http://d3js.org/d3.v3.min.js"></script>
 </head>
 <body>
 	<table>
@@ -50,7 +50,7 @@
 		function updateSvg() {
 			var graphDataJson = d3.select("#graphData").html();
 			var graphData = JSON.parse(graphDataJson);
-			GraphSvgD3.toSvg("#graphSvgContainer", "graphElementId", graphData.graph, graphData.settings);
+			GraphSvg.toSvg("#graphSvgContainer", "graphElementId", graphData.graph, graphData.settings);
 			d3.select("#saveButton")
 				.style("display", null);
 		}
